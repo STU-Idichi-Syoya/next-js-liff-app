@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useQRCode } from "next-qrcode";
 import packageJson from "../../package.json";
 import Link from 'next/link'
+import Script from 'next/script'
 
 const ModalPortal = props => {
     const modalRoot = document.createElement('div');
@@ -35,15 +36,15 @@ export default function MyID(props) {
                 <title>HIRAKATA BOT</title>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.3/dist/css/uikit.min.css" />
 
-                <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.3/dist/js/uikit.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.3/dist/js/uikit-icons.min.js"></script>
+                <Script src="https://cdn.jsdelivr.net/npm/uikit@3.9.3/dist/js/uikit.min.js"></Script>
+                <Script src="https://cdn.jsdelivr.net/npm/uikit@3.9.3/dist/js/uikit-icons.min.js"></Script>
 
             </Head>
             <nav className="uk-navbar-container" uk-navbar='true' style={{color: 'white',backgroundColor: '#64B5F6'}}>
                 <div className="uk-navbar-left">
                     <ul className="uk-navbar-nav">
                         <li>
-                            <a style={{color: 'white'}} href="/"> {'<'} メニューにもどる</a>
+                            <Link href="/"><a style={{color: 'white'}}> {'<'} メニューにもどる</a></Link>
                         </li>
 
                     </ul>
@@ -55,7 +56,7 @@ export default function MyID(props) {
                     <div className="uk-card-header">
                         <div className="uk-grid-small uk-flex-middle" uk-grid='true'>
                             <div className="uk-width-auto">
-                                <img className="uk-border-circle" width="40" height="40" src="images/wine.png" />
+                                {/* <img className="uk-border-circle" width="40" height="40" src="images/wine.png" /> */}
                             </div>
                             <div className="uk-width-expand">
                                 <h3 className="uk-card-title uk-margin-remove-bottom">Bar Goco 枚方店</h3>
@@ -77,7 +78,7 @@ export default function MyID(props) {
                     <div className="uk-card-header">
                         <div className="uk-grid-small uk-flex-middle" uk-grid='true'>
                             <div className="uk-width-auto">
-                                <img className="uk-border-circle" width="40" height="40" src="images/wine.png" />
+                                {/* <img className="uk-border-circle" width="40" height="40" src="images/wine.png" /> */}
                             </div>
                             <div className="uk-width-expand">
                                 <h3 className="uk-card-title uk-margin-remove-bottom">Cafe Tanaka</h3>
